@@ -19,7 +19,7 @@ services:
     restart: always
     image: directus/directus:11.3.5
     ports:
-      - 8055:8055
+      - 8060:8055
     volumes:
       - /var/www/vhosts/maisvagases.com.br/bc.maisvagases.com.br/uploads:/directus/uploads
       # If you want to load extensions from the host
