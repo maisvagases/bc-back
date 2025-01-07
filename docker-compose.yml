@@ -21,7 +21,7 @@ services:
     ports:
       - 8070:8055
     volumes:
-      - /var/www/vhosts/maisvagases.com.br/bc.maisvagases.com.br/uploads:/directus/uploads
+      - /var/www/vhosts/maisvagases.com.br/cms-bc.maisvagases.com.br/uploads:/directus/uploads
       # If you want to load extensions from the host
       # - ./extensions:/directus/extensions
     depends_on:
@@ -46,7 +46,7 @@ services:
       REDIS: "redis://cache:6379"
 
       CORS_ENABLED: "true"
-      CORS_ORIGIN: "http://localhost:3000,http://localhost,https://cloudworkstations.dev,https://web.maisvagases.com.br,https://app.maisvagases.com.br,https://cms.maisvagases.com.br,https://9000-idx-app-1730263184232.cluster-etsqrqvqyvd4erxx7qq32imrjk.cloudworkstations.dev"
+      CORS_ORIGIN: "http://localhost:3000,http://localhost,https://cms-bc.maisvagases.com.br,https://curriculos.maisvagases.com.br"
       CORS_METHODS: 'GET,PUT,POST,PATCH,DELETE,HEAD'
       CORS_ALLOWED_HEADERS: 'Content-Type,Authorization'
       CORS_EXPOSED_HEADERS: 'Content-Range'
@@ -58,7 +58,7 @@ services:
 
   # Make sure to set this in production
   # (see https://docs.directus.io/self-hosted/config-options#general)
-      PUBLIC_URL: "https://bc-cms.maisvagases.com.br"
+      PUBLIC_URL: "https://cms-bc.maisvagases.com.br"
 
   pgadmin:
     image: dpage/pgadmin4
